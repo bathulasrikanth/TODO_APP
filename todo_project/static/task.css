@@ -1,0 +1,32 @@
+table{
+    width: 100%;
+}
+table, th, td{
+    border-collapse: collapse;
+}
+th{
+    background-color: rgb(28, 28, 37);
+    padding: 1.5%;
+    color: whitesmoke;
+}
+td{
+    background-color: azure;
+    padding: 0.1%;
+
+}
+h1{
+    text-align: center;
+}
+#Button{
+    text-align: center;
+    margin-top: 1%;
+}
+
+a:link, a:visited {
+    background-color: #18652a;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+} 

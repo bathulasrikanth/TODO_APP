@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    {% load static %}
+    <link href="{% static 'task.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h1><b>EMPLOYEE DETAILS</b></h1>
+    <table border="1" >
+        <tr>
+            <th><b>ID</b></th>
+             <th><b>Name</b></th>
+              <th><b>Description</b></th> 
+              <th><b>Status</b></th>
+               <th><b>Edit</b></th>
+                <th><b>Delete</b></th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{task.id}}</td>
+            <td><h2>{{ task.title }}</h2></td>
+            <td><p>{{ task.description }}</p></td>
+            <td><p>Status: {{ task.completed|yesno:"Completed,Not Completed" }}</p></td>
+            <td><a href="{% url 'update_task' task.id %}">Edit</a></td>
+            <td><a href="{% url 'delete_task' task.id %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    
+    <div id="Button">
+   <a href="{% url 'add_task' %}">Add New Task</a>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
